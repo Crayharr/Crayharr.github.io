@@ -1,12 +1,105 @@
+<!-- 
+Vurdering nr. 2 Kapittel 7
+Laget av Oskar H. og Vetle W. 2IT
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oskar sin proffe side</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <title>Kapittel 7</title>
+
+        <script>
+
+            window.onload = startup
+
+            function startup() {
+                // Første eksempel i boken, Side 141 under Enkle funksjoner.
+                Two()
+                Three(3, 7)
+                document.getElementById("btnGiveAlert").onclick = One
+                
+
+                var ctx = document.getElementById("drawspace").getContext("2d");
+                var colors1 = ['red', 'green', 'blue', 'yellow'];
+                var colors2 = ['black', 'gray']
+
+                Two(100, 100, 150, 10, colors1, ctx)
+                Two(300, 100, 150, 15, colors2, ctx)
+                Two(200, 250, 90, 15, colors1, ctx)
+                
+                var answer = Three(5, Three(2, 9)); // The number 3 is saved in answer
+                alert("The Answer was: " + svar);
+
+                var myTaxes = ThreePointOne(250000, 28);
+                alert(myTaxes); // Prints 70000
+
+            }
+
+            // Enkel funksjon for å vise litt hvordan parametere fungerer. Laget av Vetle
+            function One() {
+                alert("You just ran a function")
+                
+            }
+             // Andre Eksempel i boken, Side 144 under Sirkelfunksjon. Laget av Oskar
+            function Two(x, y, radius, amount, colors, ctx) {
+                var radiusPull = radius / amount 
+                var counter = 0;
+                while (counter < amount) {
+                    ctx.strokeStyle = colors[counter % colors.length];
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                    ctx.stroke();
+                    radius = radius - radiusPull;
+                    counter++;
+
+                }
+            // Tredje Eksempel i boken, Side 146 under Funksjoner som retrunerer verdier    
+            function Three(number1, number2) {
+                if (number1 < number2) {
+                    return number1;
+                }
+                else {
+                    return number2;
+                }
+            }
+            // 
+            function ThreePointOne(loan, percent) {
+                var taxes = loan * percent / 100;
+                return taxes
+            }
+            }
+        </script>
+
+    <style>
+    </style>
+
 </head>
-<body>
-    <h1>Oskar in da house!!</h1>
-</body>
+
+    <body>
+        <h2>Simple funksjoner:</h2>
+        <p>
+            Denne knappen starter en funksjon. Funksjonen er satt til å sende en alert. <br>
+            <button id="btnGiveAlert">Run a function</button> <br>
+            <br>
+            Under ser du et "canvas" med mange fargede sirkler. Prosessen for å tegne den er satt inne i en funksjon som blir oppkalt når vi starter siden.
+        </p>
+
+        <canvas id="drawspace" width="400" height="400" ></canvas><br>
+
+        <h2>Globale og lokale variabler:</h2>
+        <p>
+            Selv om globale og lokale variabler ikke er funksjoner i seg selv, er de fortsatt veldig viktige når det kommer til funksjoner.
+
+            <br>
+
+            En global variabel er en variabel som er utenfor funksjoner. Det vi si at alle funksjoner kan bruke og endre på den variabelen.
+
+            <br>
+
+            En lokal variabel er en variabel som er innenfor en funksjon. Det vil si at den variabelen bare eksisterer i den funksjonen, og at andre funksjoner ikke kan bruke den. 
+        </p>
+
+    </body>
 </html>
