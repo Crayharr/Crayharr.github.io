@@ -17,9 +17,7 @@ Laget av Oskar H. og Vetle W. 2IT
             function startup() {
                 // Første eksempel i boken, Side 141 under Enkle funksjoner.
                 Two()
-                Three(3, 7)
                 document.getElementById("btnGiveAlert").onclick = One
-                
 
                 var ctx = document.getElementById("drawspace").getContext("2d");
                 var colors1 = ['red', 'green', 'blue', 'yellow'];
@@ -28,16 +26,11 @@ Laget av Oskar H. og Vetle W. 2IT
                 Two(100, 100, 150, 10, colors1, ctx)
                 Two(300, 100, 150, 15, colors2, ctx)
                 Two(200, 250, 90, 15, colors1, ctx)
+
                 
-                var answer = Three(5, Three(2, 9)); // The number 3 is saved in answer
-                alert("The Answer was: " + svar);
-
-                var myTaxes = ThreePointOne(250000, 28);
-                alert(myTaxes); // Prints 70000
-
             }
 
-            // Enkel funksjon for å vise litt hvordan parametere fungerer. Laget av Vetle
+             // Enkel funksjon for å vise litt hvordan parametere fungerer. Laget av Vetle
             function One() {
                 alert("You just ran a function")
                 
@@ -54,8 +47,12 @@ Laget av Oskar H. og Vetle W. 2IT
                     radius = radius - radiusPull;
                     counter++;
 
-                }
-            
+            }
+            // Dette er en funksjon som skal vises som et eksempel nede på "Eksempel av funksjon". Laget av Oskar
+            function Three() {
+                
+            }
+
             }
         </script>
 
@@ -65,16 +62,41 @@ Laget av Oskar H. og Vetle W. 2IT
 </head>
 
     <body>
+        <div class="Box1">
+            <h1>Kapittel 7 | Funksjoner</h1>
+            <h3>Her er en interaktiv nettside, hvor du vil (forhåpentligvis) lære litt om funksjoner!</h3>
+        </div>
+        
+        <br>
+
+        <div class="Box2">
+            <h2>Hva er en funksjon?</h2>
+            <p>
+                En funksjon er akkurat det det høres ut som. Nemlig en funksjon. I aller fleste kodespråk er funksjoner noe man kaller opp for å utføre en oppgave, eller en funksjon. Funksjoner er veldig viktitge for å skrive et script eller program. Det er nesten umulig å skrive et bra program uten dem.
+            </p>
+        </div> 
+        
+        <br>
+
+        <div class="Box3">
         <h2>Simple funksjoner:</h2>
         <p>
             Denne knappen starter en funksjon. Funksjonen er satt til å sende en alert. <br>
-            <button id="btnGiveAlert">Run a function</button> <br>
             <br>
-            Under ser du et "canvas" med mange fargede sirkler. Prosessen for å tegne den er satt inne i en funksjon som blir oppkalt når vi starter siden.
+            <button id="btnGiveAlert" class="darkButtons">Run a function</button> <br>
+            <br>
+            Under oppstart "lytter" koden på knappen. Når vi trykker knappen, opkaller den funksjonen som vi har laget. Funksjonen kjører deretter en "Alert". <br>
+            <br>
+            Her ser du et "canvas" med mange fargede sirkler. Prosessen for å tegne den er satt inne i en funksjon som blir oppkalt når vi starter siden. <br>
         </p>
 
-        <canvas id="drawspace" width="400" height="400" ></canvas><br>
+        <canvas id="drawspace" width="400" height="400" ></canvas> <br>
 
+        </div>
+
+        <br>
+        
+        <div class="Box4">
         <h2>Globale og lokale variabler:</h2>
         <p>
             Selv om globale og lokale variabler ikke er funksjoner i seg selv, er de fortsatt veldig viktige når det kommer til funksjoner.
@@ -85,8 +107,30 @@ Laget av Oskar H. og Vetle W. 2IT
 
             <br>
 
-            En lokal variabel er en variabel som er innenfor en funksjon. Det vil si at den variabelen bare eksisterer i den funksjonen, og at andre funksjoner ikke kan bruke den. 
+            En lokal variabel er en variabel som er innenfor en funksjon. Det vil si at den variabelen bare eksisterer i den funksjonen, og at andre funksjoner ikke kan bruke den. Det er viktig å vite forskjellen mellom globale og lokale variabler når man skriver kode med funksjoner.
         </p>
+        </div>
 
+        <br>
+
+        <div>
+        <h2>Eksempel av funksjon</h2>
+
+        <pre>
+            
+
+        </pre>
+        
+        </div>
+
+        <br>
+
+        <div class="Box5">
+            <h2>To forskjellige typer funksjoner</h2>
+            <p>
+                I hovedsak finnes det to forskjellige type funksjoner: Funksjoner som utfører en handling, og funksjoner som gir tilbake en verdi.
+            </p>
+        </div>
     </body>
-</html>
+
+    
