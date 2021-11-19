@@ -1,3 +1,17 @@
 #drawspace {
     border-style: solid;
+    border-color: black;
+    background-color: white;
 }
+
+#btnGiveAlert {
+    background-color: #2C2F33;
+    color: white;
+}
+
+body {
+    background-color: #2C2F33 ;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
