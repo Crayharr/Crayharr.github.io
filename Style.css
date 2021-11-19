@@ -4,7 +4,7 @@
     background-color: white;
 }
 
-#btnGiveAlert {
+.darkButtons {
     background-color: #2C2F33;
     color: white;
 }
@@ -13,5 +13,41 @@ body {
     background-color: #2C2F33 ;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Box1 {
+    border-style: solid;
+    border-color: white;
+    box-shadow: black;
+    border-width: 10px;
+    text-align: center;
+}
+
+.Box2 {
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+}
+
+.Box3 {
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+}
+
+.Box4 {
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+}
+
+.Box5 {
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
 }
 
