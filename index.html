@@ -18,6 +18,8 @@ Laget av Oskar H. og Vetle W. 2IT
                 // Første eksempel i boken, Side 141 under Enkle funksjoner.
                 Two()
                 document.getElementById("btnGiveAlert").onclick = One
+                document.getElementById("btnTextShow").onclick = Three
+                
 
                 var ctx = document.getElementById("drawspace").getContext("2d");
                 var colors1 = ['red', 'green', 'blue', 'yellow'];
@@ -27,7 +29,6 @@ Laget av Oskar H. og Vetle W. 2IT
                 Two(300, 100, 150, 15, colors2, ctx)
                 Two(200, 250, 90, 15, colors1, ctx)
 
-                
             }
 
              // Enkel funksjon for å vise litt hvordan parametere fungerer. Laget av Vetle
@@ -48,12 +49,14 @@ Laget av Oskar H. og Vetle W. 2IT
                     counter++;
 
             }
-            // Dette er en funksjon som skal vises som et eksempel nede på "Eksempel av funksjon". Laget av Oskar
+            }
+            // Dette er en funksjon som skal vises som et eksempel nede på "Eksempel av funksjon". Laget av Oskar, med feilsøking fra Vetle
             function Three() {
-                
+                var yourText = document.getElementById("boxInput").value
+                document.getElementById("exampleFunction1").innerHTML = yourText
             }
 
-            }
+            
         </script>
 
     <style>
@@ -116,8 +119,26 @@ Laget av Oskar H. og Vetle W. 2IT
         <div>
         <h2>Eksempel av funksjon</h2>
 
+            <input type="text" id="boxInput" />
+            <button id="btnTextShow">Insert text</button>
+            <p id="exampleFunction1">Skriv noe morsomt i tekstboksen over!</p>
+            
+            <br>
+
+            <p>
+                Under ser du hvordan koden ser ut:
+            </p>
         <pre>
             
+                function startup() {
+                document.getElementById("btnTextShow").onclick = Three
+            }  
+
+                
+                function Three() {
+                var yourText = document.getElementById("boxInput").value
+                document.getElementById("exampleFunction1").innerHTML = yourText
+            }
 
         </pre>
         
@@ -128,9 +149,9 @@ Laget av Oskar H. og Vetle W. 2IT
         <div class="Box5">
             <h2>To forskjellige typer funksjoner</h2>
             <p>
-                I hovedsak finnes det to forskjellige type funksjoner: Funksjoner som utfører en handling, og funksjoner som gir tilbake en verdi.
+                I hovedsak finnes det to forskjellige type funksjoner: <br>
+                Funksjoner som utfører en handling, og funksjoner som gir tilbake en verdi. Det vi har sett på over er funksjoner som utfører handlinger. For eksempel at vi tar en input og setter den inn i en tekst. <br>
+                Nå skal vi se på funksjoner som gir tilbake en verdi.
             </p>
         </div>
     </body>
-
-    
