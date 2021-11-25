@@ -29,6 +29,8 @@ Laget av Oskar H. og Vetle W. 2IT
                 Two(300, 100, 150, 15, colors2, ctx)
                 Two(200, 250, 90, 15, colors1, ctx)
 
+                document.getElementById("showCode").hidden = true
+                document.getElementById("revealCode").hidden = true
             }
 
              // Enkel funksjon for å vise litt hvordan parametere fungerer. Laget av Vetle
@@ -52,7 +54,9 @@ Laget av Oskar H. og Vetle W. 2IT
             }
             // Dette er en funksjon som skal vises som et eksempel nede på "Eksempel av funksjon". Laget av Oskar, med feilsøking fra Vetle
             function Three() {
-                var yourText = document.getElementById("boxInput").value
+                document.getElementById("revealCode").hidden = false
+                document.getElementById("showCode").hidden = false
+                var yourText = "Det du skrev i tekstboksen var: " + document.getElementById("boxInput").value
                 document.getElementById("exampleFunction1").innerHTML = yourText
             }
 
@@ -125,10 +129,10 @@ Laget av Oskar H. og Vetle W. 2IT
             
             <br>
 
-            <p>
+            <p id="revealCode">
                 Under ser du hvordan koden ser ut:
             </p>
-        <pre>
+        <pre id="showCode">
             
                 function startup() {
                 document.getElementById("btnTextShow").onclick = Three
@@ -150,8 +154,38 @@ Laget av Oskar H. og Vetle W. 2IT
             <h2>To forskjellige typer funksjoner</h2>
             <p>
                 I hovedsak finnes det to forskjellige type funksjoner: <br>
-                Funksjoner som utfører en handling, og funksjoner som gir tilbake en verdi. Det vi har sett på over er funksjoner som utfører handlinger. For eksempel at vi tar en input og setter den inn i en tekst. <br>
-                Nå skal vi se på funksjoner som gir tilbake en verdi.
+                Funksjoner som utfører en handling, og funksjoner som gir tilbake en verdi. Det vi har sett på over er funksjoner som utfører handlinger. <br>
+                For eksempel at vi tar en input og setter den inn i en tekst. <br>
+                Nå skal vi se på en funksjon som gir tilbake en verdi.
             </p>
+
+            <pre class="alignLeft">
+                function minFunksjon(navn) {
+                    return "Hallo" + navn;
+                }
+                document.getElementById("eks").innerHTML = minFunksjon("Vetle");
+            </pre>
+        </div>
+        
+        <br>
+
+        <div class="Box6">
+            <h2>Rekursive funksjoner</h2>
+            <p>Det er mulig å la en funksjon kalle opp seg selv. Dette kalles en <i>rekursiv funksjon</i>. Vi kan for eksempel skrive: </p>
+            <pre class="alignLeft">
+                function oppstart() {
+                    rekursivFunk(10); //Tallene 10 til 0 skrives ut
+                }
+
+                function rekursivFunk(number){
+                    document.getElementById("utskrift").innerHTML += tall + "br ";
+                    tall--;
+
+                    if(tall > 0) {
+                        rekursivFunk(tall);
+                    }
+                }
+            </pre>
+            
         </div>
     </body>
