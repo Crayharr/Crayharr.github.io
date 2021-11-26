@@ -4,6 +4,10 @@
     background-color: white;
 }
 
+#resonse {
+    width: 50px;
+}
+
 .darkButtons {
     background-color: #2C2F33;
     color: white;
@@ -56,6 +60,20 @@ body {
 }
 
 .Box6 {
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+}
+
+.Box7 {
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+}
+
+.Box8 {
     border-style: solid;
     border-color: white;
     border-width: 10px;
