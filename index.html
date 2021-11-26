@@ -20,6 +20,7 @@ Laget av Oskar H. og Vetle W. 2IT
                 document.getElementById("btnGiveAlert").onclick = One
                 document.getElementById("btnTextShow").onclick = Three
                 
+                
 
                 var ctx = document.getElementById("drawspace").getContext("2d");
                 var colors1 = ['red', 'green', 'blue', 'yellow'];
@@ -31,9 +32,12 @@ Laget av Oskar H. og Vetle W. 2IT
 
                 document.getElementById("showCode").hidden = true
                 document.getElementById("revealCode").hidden = true
+
+                document.getElementById("btnCheck").onclick = FivePointOne;
+                document.getElementById("response").style.visibility = "hidden";
             }
 
-             // Enkel funksjon for å vise litt hvordan parametere fungerer. Laget av Vetle
+             // Enkel funksjon. Laget av Vetle
             function One() {
                 alert("You just ran a function")
                 
@@ -52,14 +56,46 @@ Laget av Oskar H. og Vetle W. 2IT
 
             }
             }
-            // Dette er en funksjon som skal vises som et eksempel nede på "Eksempel av funksjon". Laget av Oskar, med feilsøking fra Vetle
+            // Dette er en orginal funksjon som skal vises som et eksempel nede på "Eksempel av funksjon". Laget av Oskar, med feilsøking fra Vetle
             function Three() {
                 document.getElementById("revealCode").hidden = false
                 document.getElementById("showCode").hidden = false
                 var yourText = "Det du skrev i tekstboksen var: " + document.getElementById("boxInput").value
                 document.getElementById("exampleFunction1").innerHTML = yourText
             }
+            
+            function Four() {
+                
+            }
 
+            function Five(text) {
+                text = text.toLowerCase();
+                if ( text.length < 2 ) {
+                    return true
+                }
+
+                else if (text.slice(0, 1) !== text.slice(-1)) {
+                    return false
+                }
+                
+                else {
+                    return Five(text.slice(1, -1));
+                }
+            }
+
+            function FivePointOne() {
+                var text = document.getElementById("txtText").value
+                
+                if (Five(text) === true) {
+                    document.getElementById("response").src = "img/checkmark.png"
+                }
+                
+                else {
+                    document.getElementById("response").src = "img/x.png"
+                }
+
+                document.getElementById("response").style.visibility = "visible"
+            }
             
         </script>
 
@@ -188,6 +224,59 @@ Laget av Oskar H. og Vetle W. 2IT
                     }
                 }
             </pre>
-            
+      
         </div>
+        
+        <br>
+
+        <div class="Box7">
+            <h2>Funksjon som verdi</h2>
+            <p>
+                Funksjoner i JavaScript kan også fungere som verdier, likt som tall og tekststrenger. <br>
+                I eksempelet under kan du se at vi lagrer funksjonen som en verdi vi kan referere til.
+            </p>
+            
+            <br>
+
+            <pre class="alignLeft">
+                function oppstart() {
+                    var mattefunksjon = summer;
+                    
+                    var verdi = mattefunksjon(3, 6) // 9
+                }
+
+                function summer(tall1, tall2) {
+                    return tall1 + tall2;
+                }
+            </pre>
+            
+            <br>
+            
+            <p>
+                Om du ser på koden over kan du se at den tar funksjonen (summer) og setter den inn i en variabel som vi kaller for mattefunksjon. <br>
+                Når vi da kaller opp den variabelen med riktige parametere refererer den til funksjonen.
+            </p>
+        </div>
+
+        <br>
+        
+        <div class="Box8">
+        <h2>Palindrom</h2>
+
+        <p>I dette eksemplet, så skal vi finne ut om teksten som du har skrevet er et Palindrom. Et palindrom er en tekst som blir identisk om vi snur den bakvendt</p> <br>
+        
+        <p>
+            Tekst: <input type="text" id="txtText">
+            <button id="btnCheck">Check</button><br>
+            <img src="" id="response" width="100px">
+        </p>
+        
+        </div>
+
+        <br>
+
+        <div class="Box9">
+
+        </div>
+    
     </body>
