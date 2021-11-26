@@ -19,6 +19,7 @@ Laget av Oskar H. og Vetle W. 2IT
                 Two()
                 document.getElementById("btnGiveAlert").onclick = One
                 document.getElementById("btnTextShow").onclick = Three
+                document.getElementById("btnNameSubmit").onclick = Six
                 
                 
 
@@ -33,8 +34,18 @@ Laget av Oskar H. og Vetle W. 2IT
                 document.getElementById("showCode").hidden = true
                 document.getElementById("revealCode").hidden = true
 
+                document.getElementById("Addition").hidden = true
+                document.getElementById("Subtraction").hidden = true
+
+                document.getElementById("numberOne").hidden = true
+                document.getElementById("numberTwo").hidden = true
+                document.getElementById("btnCalculate").hidden = true
+
                 document.getElementById("btnCheck").onclick = FivePointOne;
                 document.getElementById("response").style.visibility = "hidden";
+
+                addition = false
+                subtraction = false
             }
 
              // Enkel funksjon. Laget av Vetle
@@ -85,6 +96,7 @@ Laget av Oskar H. og Vetle W. 2IT
                 }
             }
 
+            //Etterfølger av "Five" som er palindrom eksempelet. Laget av Oskar
             function FivePointOne() {
                 var text = document.getElementById("txtText").value
                 
@@ -98,6 +110,70 @@ Laget av Oskar H. og Vetle W. 2IT
 
                 document.getElementById("response").style.visibility = "visible"
             }
+
+
+            // Siste eksempelfunksjon. Enkel kalkulator laget av Vetle.
+            function Six() {
+                var Name = "Hei, " + document.getElementById("calcName").value + "," + " hva vil du gjøre?"
+
+                document.getElementById("calcGreeting").innerHTML = Name
+
+                document.getElementById("Addition").hidden = false
+                document.getElementById("Subtraction").hidden = false
+
+                document.getElementById("Addition").onclick = sixPointOne
+                document.getElementById("Subtraction").onclick = sixPointTwo
+            }
+
+            function sixPointOne() {
+                addition = true
+
+                document.getElementById("Addition").disabled = true
+                document.getElementById("Subtraction").disabled = true
+
+                document.getElementById("numberOne").hidden = false
+                document.getElementById("numberTwo").hidden = false
+                document.getElementById("btnCalculate").hidden = false
+
+                document.getElementById("btnCalculate").onclick = sixPointThree
+            }
+
+            function sixPointTwo() {
+                subtraction = true
+
+                document.getElementById("Addition").disabled = true
+                document.getElementById("Subtraction").disabled = true
+
+                document.getElementById("numberOne").hidden = false
+                document.getElementById("numberTwo").hidden = false
+                document.getElementById("btnCalculate").hidden = false
+
+                document.getElementById("btnCalculate").onclick = sixPointThree
+            }
+
+            function sixPointThree() {
+
+                if (addition === true) {
+
+                    var Number1 = document.getElementById("numberOne").value
+                    var Number2 = document.getElementById("numberTwo").value
+
+                    document.getElementById("calcAnswer").innerHTML = Number1 + " + " + Number2 + " = " + (parseInt(Number1) + parseInt(Number2))
+                }
+
+                else if (subtraction === true) {
+
+                    var Number1 = document.getElementById("numberOne").value
+                    var Number2 = document.getElementById("numberTwo").value
+
+                    document.getElementById("calcAnswer").innerHTML = Number1 + " - " + Number2 + " = " + (parseInt(Number1) - parseInt(Number2))
+                }
+
+                else {
+                    alert("error")
+                }
+            }
+
             
         </script>
 
@@ -161,7 +237,7 @@ Laget av Oskar H. og Vetle W. 2IT
         <div>
         <h2>Eksempel av funksjon</h2>
 
-            <input type="text" id="boxInput" />
+            <input type="text" id="boxInput" placeholder="noe morsomt" />
             <button id="btnTextShow">Insert text</button>
             <p id="exampleFunction1">Skriv noe morsomt i tekstboksen over!</p>
             
@@ -170,6 +246,7 @@ Laget av Oskar H. og Vetle W. 2IT
             <p id="revealCode">
                 Under ser du hvordan koden ser ut:
             </p>
+
         <pre id="showCode">
             
                 function startup() {
@@ -277,8 +354,25 @@ Laget av Oskar H. og Vetle W. 2IT
 
         <br>
 
-        <div class="Box9">
+        <div>
+            <h1>Eksempel funksjon - Kalkulator</h1>
 
+            <p>
+                <input type="text" placeholder="Skriv navnet ditt her" id="calcName">
+                <button id="btnNameSubmit">Submit</button>
+                <p id="calcGreeting"></p>
+
+                <button id="Addition">Addisjon</button>
+                <button id="Subtraction">Subtraksjon</button><br>
+
+                <br>
+
+                <input type="number" placeholder="Tall 1" id="numberOne">
+                <input type="number" placeholder="Tall 2" id="numberTwo">
+                <button id="btnCalculate">Calculate</button>
+
+                <p id=calcAnswer></p>
+            </p>
         </div>
     
     </body>
