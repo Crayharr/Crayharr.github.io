@@ -1,0 +1,46 @@
+#drawspace {
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
+
+#resonse {
+    width: 50px;
+}
+
+.darkButtons {
+    background-color: #2C2F33;
+    color: white;
+}
+
+.festiveButtons {
+    background-color: white;
+    color: red
+}
+
+body {
+    border-image: repeating-linear-gradient(135deg, #ccc, #ccc 10px, #eee 10px, #eee 20px);
+    width: 95%;
+    margin: auto;
+    background-color: #2C2F33 ;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.Box {
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.macmillandictionary.com%2Fdictionary%2Fbritish%2Fwhite_1&psig=AOvVaw3gv6M9Y6T6fBAb_u62ps-S&ust=1638628280782000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCTwZfsx_QCFQAAAAAdAAAAABAS);
+    background-size: 5px, 5px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: black;
+    border-width: 10px;
+    text-align: center;
+}
+
+.gradient-stripes {
+    border-image: repeating-linear-gradient(135deg, #ccc, #ccc 10px, #eee 10px, #eee 20px);
+  }
