@@ -1,0 +1,41 @@
+body {
+    background-color: #2C2F33 ;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+}
+
+#drawspace {
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
+
+#resonse {
+    width: 50px;
+}
+
+.darkButtons {
+    background-color: #2C2F33;
+    color: white;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.Box {
+    border-style: solid; 
+    border-color: lightgreen;
+    border-width: 10px;
+    text-align: center;
+    background: lightcyan;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.indent {
+    width: 95%;
+    margin: auto;
+}
