@@ -4,14 +4,12 @@ Laget av Oskar H. og Vetle W. 2IT
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
-    <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+    
     <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Kapittel 7</title>
 
         <script>
@@ -105,11 +103,11 @@ Laget av Oskar H. og Vetle W. 2IT
                 var text = document.getElementById("txtText").value
                 
                 if (Five(text) === true) {
-                    document.getElementById("response").src = "img/checkmark.png"
+                    document.getElementById("response").src = "assets/checkmark.png"
                 }
                 
                 else {
-                    document.getElementById("response").src = "img/x.png"
+                    document.getElementById("response").src = "assets/x.png"
                 }
 
                 document.getElementById("response").style.visibility = "visible"
@@ -182,19 +180,20 @@ Laget av Oskar H. og Vetle W. 2IT
         </script>
 
     <style>
+        body { background:snow !important ;}
     </style>
 
 </head>
 
     <body>
-        <div class="Box">
+        <div class="Box text-danger">
             <h1>Kapittel 7 | Funksjoner</h1>
             <h3>Her er en interaktiv nettside, hvor du vil (forhåpentligvis) lære litt om funksjoner!</h3>
         </div>
         
         <br>
 
-        <div class="Box">
+        <div class= "Box text-danger">
             <h2>Hva er en funksjon?</h2>
             <p>
                 En funksjon er akkurat det det høres ut som. Nemlig en funksjon. I aller fleste kodespråk er funksjoner noe man kaller opp for å utføre en oppgave, eller en funksjon. Funksjoner er veldig viktitge for å skrive et script eller program. Det er nesten umulig å skrive et bra program uten dem.
@@ -203,12 +202,12 @@ Laget av Oskar H. og Vetle W. 2IT
         
         <br>
 
-        <div class="Box">
+        <div class= "Box text-danger">
         <h2>Simple funksjoner:</h2>
         <p>
             Denne knappen starter en funksjon. Funksjonen er satt til å sende en alert. <br>
             <br>
-            <button id="btnGiveAlert" class="darkButtons">Run a function</button> <br>
+            <button id="btnGiveAlert" class="darkButtons btn btn-success">Run a function</button> <br>
             <br>
             Under oppstart "lytter" koden på knappen. Når vi trykker knappen, opkaller den funksjonen som vi har laget. Funksjonen kjører deretter en "Alert". <br>
             <br>
@@ -221,7 +220,7 @@ Laget av Oskar H. og Vetle W. 2IT
 
         <br>
         
-        <div class="Box">
+        <div class= "Box text-danger">
         <h2>Globale og lokale variabler:</h2>
         <p>
             Selv om globale og lokale variabler ikke er funksjoner i seg selv, er de fortsatt veldig viktige når det kommer til funksjoner.
@@ -238,11 +237,11 @@ Laget av Oskar H. og Vetle W. 2IT
 
         <br>
 
-        <div>
+        <div class="indent">
         <h2>Eksempel av funksjon</h2>
 
-            <input type="text" id="boxInput" placeholder="noe morsomt" />
-            <button id="btnTextShow">Insert text</button>
+            <input type="text" id="boxInput" placeholder="Noe morsomt" />
+            <button id="btnTextShow" class="btn-success btn">Insert text</button>
             <p id="exampleFunction1">Skriv noe morsomt i tekstboksen over!</p>
             
             <br>
@@ -269,7 +268,7 @@ Laget av Oskar H. og Vetle W. 2IT
 
         <br>
 
-        <div class="Box">
+        <div class= "Box text-danger">
             <h2>To forskjellige typer funksjoner</h2>
             <p>
                 I hovedsak finnes det to forskjellige type funksjoner: <br>
@@ -290,7 +289,7 @@ Laget av Oskar H. og Vetle W. 2IT
         
         <br>
 
-        <div class="Box">
+        <div class= "Box text-danger">
             <h2>Rekursive funksjoner</h2>
             <p>Det er mulig å la en funksjon kalle opp seg selv. Dette kalles en <i>rekursiv funksjon</i>. Vi kan for eksempel skrive: </p>
             <pre class="alignLeft">
@@ -312,7 +311,7 @@ Laget av Oskar H. og Vetle W. 2IT
         
         <br>
 
-        <div class="Box">
+        <div class= "Box text-danger">
             <h2>Funksjon som verdi</h2>
             <p>
                 Funksjoner i JavaScript kan også fungere som verdier, likt som tall og tekststrenger. <br>
@@ -343,14 +342,14 @@ Laget av Oskar H. og Vetle W. 2IT
 
         <br>
         
-        <div class="Box">
+        <div class= "Box text-danger">
         <h2>Palindrom</h2>
 
         <p>I dette eksemplet, så skal vi finne ut om teksten som du har skrevet er et Palindrom. Et palindrom er en tekst som blir identisk om vi snur den bakvendt</p> <br>
         
         <p>
             Tekst: <input type="text" id="txtText">
-            <button id="btnCheck">Check</button><br>
+            <button id="btnCheck" class="btn-success btn">Check</button><br>
             <img src="" id="response" width="100px">
         </p>
         
@@ -358,25 +357,25 @@ Laget av Oskar H. og Vetle W. 2IT
 
         <br>
 
-        <div>
+        <div class="indent">
             <h1>Eksempel funksjon - Kalkulator</h1>
 
             <p>
                 <input type="text" placeholder="Skriv navnet ditt her" id="calcName">
-                <button id="btnNameSubmit">Submit</button>
+                <button id="btnNameSubmit" class="btn-success btn">Submit</button>
                 <p id="calcGreeting"></p>
 
-                <button id="Addition">Addisjon</button>
-                <button id="Subtraction">Subtraksjon</button><br>
+                <button id="Addition" class="btn-success btn">Addisjon</button>
+                <button id="Subtraction" class="btn-success btn">Subtraksjon</button><br>
 
                 <br>
 
                 <input type="number" placeholder="Tall 1" id="numberOne">
                 <input type="number" placeholder="Tall 2" id="numberTwo">
-                <button id="btnCalculate">Calculate</button>
+                <button id="btnCalculate" class="btn-success btn">Calculate</button>
 
-                <p id=calcAnswer></p>
+                <p id="calcAnswer"></p>
             </p>
         </div>
-    
+        
     </body>
