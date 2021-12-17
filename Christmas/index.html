@@ -6,6 +6,7 @@ Laget av Oskar H. og Vetle W. 2IT
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     
     <link rel="stylesheet" type="text/css" href="Style.css" />
@@ -29,9 +30,9 @@ Laget av Oskar H. og Vetle W. 2IT
                 var colors1 = ['red', 'green', 'blue', 'yellow'];
                 var colors2 = ['black', 'gray']
 
-                Two(100, 100, 150, 10, colors1, ctx)
-                Two(300, 100, 150, 15, colors2, ctx)
-                Two(200, 250, 90, 15, colors1, ctx)
+                Two(50, 50, 75, 20, colors1, ctx)
+                Two(150, 50, 75, 7.5, colors2, ctx)
+                Two(100, 125, 45, 7.5, colors1, ctx)
 
                 document.getElementById("showCode").hidden = true
                 document.getElementById("revealCode").hidden = true
@@ -180,7 +181,7 @@ Laget av Oskar H. og Vetle W. 2IT
         </script>
 
     <style>
-        body { background:aquamarine !important ;}
+        body { background-image: url('assets/snow.gif'); background-repeat: repeat ; background-size: 500px;}
     </style>
 
 </head>
@@ -189,11 +190,7 @@ Laget av Oskar H. og Vetle W. 2IT
 
     <body>
 
-        <audio autoplay loop src="assets/Forhonor.mp3">Dette er en test</audio>
-        
-        <div style="position: fixed; ">
-            <img src="assets/snow.gif" alt="" width="1920px" height="1080px">
-        </div>
+        <audio autoplay loop src="assets/Giorno's Christmas Experience.mp3">Dette er en test</audio>
         
         
         
@@ -226,7 +223,7 @@ Laget av Oskar H. og Vetle W. 2IT
             Her ser du et "canvas" med mange fargede sirkler. Prosessen for å tegne den er satt inne i en funksjon som blir oppkalt når vi starter siden. <br>
         </p>
 
-        <canvas id="drawspace" width="400" height="400" ></canvas> <br>
+        <canvas id="drawspace" width="200" height="200" ></canvas> <br>
 
         </div>
 
